@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- utilisation des icones provenants de fontawesome.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Police de caractères pour le site : La belle aurore, (disponible sur fonts.google.com) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <!-- cdn bootstrap pour menu burger  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio de David Ngo</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+    <meta name="description" content="Mon Portfolio fait maison, site web développé avec: HTML, CSS et JavaScript. Développeur full stack, j'aime la programmation que ce soit du Java, C#, python ou autre. J'ai déjà plusieurs projets à mon actif montrant mon savoir-faire et qui sont visibles ici."/>
+</head>
+
+<body>
+    <section id="container-book">
+        <!-- xxl car le menu burger apparaîtra pour les résolutions inférieures à 1400px. -->
+        <nav class="navbar navbar-expand-xxl navbar-light">
+            <div class="container-fluid">
+                <img id="logo" src="img/logo.webp" alt="logo du portfolio">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <!-- compensation avec des espaces car j'ai modifié au niveau du .nav-item dans le css pour que le menu déroulant rempli bien toute la longueur de la fenêtre -->
+                            <a class="nav-link" aria-current="page" href="#container-aboutme">À propos de moi &nbsp;&nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Mes projets &nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#container-contact">Contact &nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p id="jour"></p>
+            <p id="mois"></p>
+            <p id="annee"></p>
+        </nav>
+
+        <a href="#" id="backToTop" title="Retour en haut">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+
+        <h1>David Ngo</h1>
+        <article class="book">
+            <h2>Mon</h2>
+            <h2>Portfolio</h2>
+            <h2>Développeur</h2>
+            <h2>Web</h2>
+            <h2>et</h2>
+            <h2>Web Mobile</h2>
+            <h2>Junior</h2>
+        </article>
+        <img id="bckg-cahier" src="img/fond-cahier.webp" alt="cahier">
+
+        <a href="https://www.linkedin.com/in/david-n-g-o/">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#contact">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </section>
+
+    <section id="container-aboutme">
+        <h2 id="aboutme">À propos de moi</h2>
+        <article class="cadrebio">
+            <img id="cadre-photo" src="img/cadre-photo.webp" alt="cadre en bois pour photo">
+            <section id="bio">
+                <a href="cv.html">
+                    <i class="fa-solid fa-paperclip"></i>Mon CV (n'hésitez pas à cliquer ici)
+                </a>
+                <p>" Depuis mon premier contact avec la programmation en C# au lycée, j'ai découvert une véritable passion pour celle-ci. Ce domaine m'a tout de suite captivé par son pouvoir de transformer des idées en solutions concrètes. 
+                <br>
+                Chaque ligne de code, chaque projet développé représente pour moi une opportunité d’apprendre et de repousser mes limites techniques et créatives.
+                <br><br>
+                La programmation n’est pas seulement un métier, c’est une vocation qui me pousse à me perfectionner constamment. Mes projets personnels et professionnels témoignent de cette envie de progresser, qu'il s'agisse de développer des sites web interactifs, des jeux-vidéo ou d'autres programmes.
+                <br><br>
+                Avec chaque projet que je mène, je vois une nouvelle occasion de grandir en tant que développeur, de partager ma passion et d’apporter ma p'tite touche à chaque réalisation. L’informatique et la programmation ne sont pas seulement ce que je fais, elles sont au cœur de qui je suis. "</p>
+                <a href="https://www.linkedin.com/in/david-n-g-o/">
+                    <i class="fa-brands fa-linkedin-in"></i> Linkedin.com/in/david-n-g-o
+                </a>
+            </section>
+        </article>
+    </section>
+
+    <section>
+        <h2 id="projects">Mes projets</h2>
+
+        <a id="git-projects" href="https://www.linkedin.com/in/david-n-g-o/"> <i class="fa-brands fa-square-github"></i>
+            Mon gitHub
+            <i class="fa-solid fa-arrow-pointer"></i>
+        </a>
+        <img class="bckg-projects" id="imac" src="img/imac.webp" alt="image de imac">
+        <img class="bckg-projects" id="ipad" src="img/ipad.webp" alt="image de ipad">
+        <img class="bckg-projects" id="iphone" src="img/iphone.webp" alt="image de iphone">
+
+        <!-- carrousel -->
+        <!-- bouton gauche -->
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        <!-- bouton droit -->
+        <i class="fa-solid fa-circle-arrow-right"></i>
+
+        <section id="carrousel">
+            <article id="container-carrousel">
+                
+            </article>
+        </section>
+
+        <!-- button 2, 500px -->
+        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-right"></i>
+
+        <!-- button 2, 300px -->
+        <i class="fa-solid fa-left-long"></i>
+        <i class="fa-solid fa-right-long"></i>
+
+        <!-- button 3, 250px -->
+        <i class="fa-solid fa-caret-left"></i>
+        <i class="fa-solid fa-caret-right"></i>
+    </section>
+
+    <section id="container-contact">
+        <h2 id="contact">Contact</h2>
+
+        <article class="details">
+            <a href="tel:+33757579393"><i class="fa-solid fa-square-phone"></i> 07 57 57 93 93</a>
+            <a href="mailto:ngo-david-caotien@outlook.fr"><i class="fa-solid fa-square-envelope"></i></i> ngo-david-caotien@outlook.fr</a>
+        </article>
+
+        <div class="contact-form">
+            <h2>Vous pouvez également me contacter via ce formulaire :</h2>
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer !</button>
+                <p id="send"></p>
+            </form>
+        </div>
+
+        <p id="ty">Merci d'avoir visité mon Portfolio !</p>
+    </section>
+
+    <footer>
+        <section id="end">
+            <h2>©2024 by <span class="david">David Ngo</span></h2>
+            <a href="terms-and-conditions.html">Mentions légales</a>
+        </section>
+    </footer>
+
+    <!-- Lien vers la librairie EmailJS -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+
+</html>
