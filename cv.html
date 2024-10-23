@@ -2,7 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- utilisation des icones provenants de fontawesome.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Police de caractères pour le site : La belle aurore, (disponible sur fonts.google.com) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section id="container-nav">
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a href="index.html">
@@ -34,36 +37,55 @@
                         </li>
                         <li class="nav-item">
                             <!-- compensation avec des espaces car j'ai modifié au niveau du .nav-item dans le css pour que le menu déroulant rempli bien toute la longueur de la fenêtre -->
-                            <a class="nav-link" aria-current="page" href="index.html#container-aboutme">À propos de moi &nbsp;&nbsp;</a>
+                            <a class="nav-link" aria-current="page" href="index.html#aboutme">À propos de moi &nbsp;&nbsp;</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#projects">Mes projets &nbsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#container-contact">Contact &nbsp;</a>
+                            <a class="nav-link" href="index.html#contact">Contact &nbsp;</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </section>
+    </header>
 
-    <section>
+    <main>
         <article id="cv">
+            <h1 id="titlecv">Voici mon CV</h1>
+            <a id="pdf_cv" href="CV_David_Ngo.pdf" download><i class="fa-solid fa-file-pdf"></i> Télécharger le CV (format PDF)</a>
             <img src="img/CV-David-Ngo.webp" alt="image de mon cv">
         </article>
-    </section>
+    </main>
 
     <footer>
         <section id="end">
             <h2>©2024 by <span class="david">David Ngo</span></h2>
-            <a href="">Mentions légales</a>
+            <br>
+            <a href="terms-and-conditions.html" title="Mentions légales" >Mentions légales</a>
+            <br>
+            <a href="https://www.iubenda.com/privacy-policy/48896574" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Politique de confidentialité ">Politique de confidentialité</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            <br>
+            <a href="https://www.iubenda.com/privacy-policy/48896574/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Politique relative aux Cookies ">Politique relative aux Cookies</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
         </section>
     </footer>
 
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+    <!-- Bannière sur les cookies générée avec iubenda.com --> 
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {"siteId":3802037,"cookiePolicyId":48896574,"lang":"fr","storage":{"useSiteId":true}};
+    </script>
+    <script type="text/javascript" 
+        src="https://cs.iubenda.com/autoblocking/3802037.js">
+    </script>
+    <script type="text/javascript" 
+        src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 </body>
 </html>

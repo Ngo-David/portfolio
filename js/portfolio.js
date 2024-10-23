@@ -5,16 +5,62 @@
 	});
 })();
 
+// Date en haut de page de index.html et en temps réel
+var maintenant=new Date();
+var jour=maintenant.getDate();
+var mois=maintenant.getMonth()+1;
+var annee=maintenant.getFullYear();
+
+document.getElementById("jour").innerHTML=jour;
+document.getElementById("mois").innerHTML=mois;
+document.getElementById("annee").innerHTML=annee;
+
+// bouton pour remonter
+var backToTopButton = document.getElementById("backToTop");
+var envelope = document.querySelector(".fa-envelope");
+var phone = document.querySelector(".fa-phone");
+var linkedin = document.querySelector(".fa-linkedin");
+
+// Afficher/Masquer le bouton en fonction du défilement
+// même principe pour les logos linkedin, tel, mail 
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 50) {
+        backToTopButton.style.display = "block";
+        envelope.style.display = "none";
+        phone.style.display = "none";
+        linkedin.style.display = "none";
+    } else {
+        backToTopButton.style.display = "none";
+        envelope.style.display = "block";
+        phone.style.display = "block";
+        linkedin.style.display = "block";
+    }
+};
+
 // Carrousel
 var urls = [
-    "http://google.com/",
-    "http://github.com",
-    "http://moi.com",
-    "http://x.com",
-    "http://exemple.com/"
+    "https://github.com/Ngo-David/Pacman",
+    "https://github.com/Ngo-David/Authentic-Go-Game",
+    "https://github.com/Ngo-David/Systeme-de-Gestion-de-Citoyens-2020",
+    "https://github.com/Ngo-David/Ice-Walker",
+    "https://github.com/Ngo-David/Flappy-Dunk",
+    "https://github.com/Ngo-David/GPI-Fenouil-la-fine-equipe",
+    "https://github.com/David-955/ParadisHardware",
+    "https://github.com/David-955/portfolio"
 ];
 
-nbr = 5; //nb de projets donc d'images aussi
+var texts = [
+    "PAC-MAN (Java)",
+    "Authentic-Go-Game (C#)",
+    "Systeme de Gestion de Citoyens (Java)",
+    "Ice Walker (Processing)",
+    "Flappy Dunk (Processing)",
+    "Fenouil (Python, Java, HTML, CSS)",
+    "Paradis du hardware (HTML, CSS)",
+    "Mon portfolio (HTML, CSS, JavaScript)"
+];
+
+nbr = 8; //nb de projets donc d'images aussi
 position = 0; // effet du carrousel, droite ou gauche
 container = document.getElementById("container-carrousel");
 leftbutton1 = document.querySelector(".fa-circle-arrow-left");
@@ -31,26 +77,38 @@ container.style.width=(800*nbr)+"px";
 
 for (i=1; i <= nbr; i++) {
     var link = document.createElement("a");
+    var description = document.createElement("p");
     link.href = urls[i - 1]; // Associe un lien unique à chaque image (tableau commence à 0)
+    link.target = "_blank"; // ouvre le lien dans un nouvel onglet
+    description.innerHTML=texts[i - 1];
+    description.className="descrphoto";
 
     div = document.createElement("div");
     div.className="photo";
-    div.style.backgroundImage="url('../img/im"+i+".jpg')";
+    div.style.backgroundImage="url('../img/im"+i+".webp')";
 
+    // objectif <container-carrousel><a><div><p>
     // Ajouter le <div> dans le <a>
     link.appendChild(div);
     // Ajouter le <a> dans le container
     container.appendChild(link);
+
+    div.appendChild(description);
 }
 
+// Action au clique du bouton flèche droite
 rightbutton1.onclick = function() {
-    if (position>-nbr+1) {
+    // Défiler à droite c'est défiler vers -1, -2, etc... jusqu'au dernier projet
+    // S'il y a 6 projets alors on part du projet 0 jusqu'à -5, une fois "position" à -5 on s'arrête car on est à la fin du carrousel 
+    if (position > -nbr+1) {
         position--;
         container.style.transform="translate("+position*800+"px)";
     }
 }
 
+// Action au clique du bouton flèche gauche
 leftbutton1.onclick = function() {
+    // chaque clique fait qu'on se rapproche du projet 0, la position de départ donc le premier projet
     if (position < 0) {
         position++;
         container.style.transform="translate("+position*800+"px)";
@@ -136,37 +194,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 });
 
 
-// bouton pour remonter
-var backToTopButton = document.getElementById("backToTop");
-var envelope = document.querySelector(".fa-envelope");
-var phone = document.querySelector(".fa-phone");
-var linkedin = document.querySelector(".fa-linkedin");
 
-// Afficher/Masquer le bouton en fonction du défilement
-// même principe pour les logos linkedin, tel, mail 
-window.onscroll = function() {
-    if (document.documentElement.scrollTop > 50) {
-        backToTopButton.style.display = "block";
-        envelope.style.display = "none";
-        phone.style.display = "none";
-        linkedin.style.display = "none";
-    } else {
-        backToTopButton.style.display = "none";
-        envelope.style.display = "block";
-        phone.style.display = "block";
-        linkedin.style.display = "block";
-    }
-};
-
-// Date
-var maintenant=new Date();
-var jour=maintenant.getDate();
-var mois=maintenant.getMonth()+1;
-var annee=maintenant.getFullYear();
-
-document.getElementById("jour").innerHTML=jour;
-document.getElementById("mois").innerHTML=mois;
-document.getElementById("annee").innerHTML=annee;
 
 
 

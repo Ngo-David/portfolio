@@ -3,13 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: 400;
-  font-style: normal;
 }
 
 body {
-    /* Police d'écriture pour tout le site sauf dans conditions confidentialités */
-    font-family: "La Belle Aurore", cursive;
+  /* Police d'écriture pour tout le site sauf dans conditions confidentialités */
+  font-family: "La Belle Aurore", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbar {
@@ -85,7 +85,7 @@ body {
   margin-top: 85px;
 }
 
-h1 {
+#davidngo {
   position: absolute;
   margin-left: 400px;
   font-size: 60px;
@@ -110,16 +110,17 @@ h1 {
   color: #63a0d9;
 }
 
+/* Placement des 3 icônes de linkedIn, du téléphone et de l'enveloppe à droite */
 .fa-linkedin {
-  bottom: 29%;
+  bottom: 42%;
 }
 
 .fa-phone {
-  bottom: 17%;
+  bottom: 29%;
 }
 
 .fa-envelope {
-  bottom: 5%;
+  bottom: 17%;
 }
 
 /* Mon */
@@ -185,7 +186,23 @@ h1 {
   z-index: 1;
 }
 
+.cadrebio {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* container "à propos de moi" */
 #aboutme {
+  /* height: 800px; */
+  background-image: url("../img/fond-aproposdemoi.webp");
+  background-repeat: no-repeat;
+  /* image de fond remplit tout le fond */
+  background-size: 100% 100%;
+  position: relative;
+  margin-top: -150px;
+}
+
+#title-aboutme {
   position: relative;
   text-align: center;
   height: 90px;
@@ -196,24 +213,9 @@ h1 {
   padding-top: 35px;
 }
 
-.cadrebio {
-  display: flex;
-  justify-content: space-between;
-}
-
-#container-aboutme {
-  /* height: 800px; */
-  background-image: url("../img/fond-aproposdemoi.webp");
-  background-repeat: no-repeat;
-  /* image de fond remplit tout le fond */
-  background-size: 100% 100%;
-  position: relative;
-  margin-top: -150px;
-}
-
 #cadre-photo {
   margin: 100px 5% 105px 5%;
-  width: 450px;
+  width: 480px;
 }
 
 #bio {
@@ -231,6 +233,7 @@ h1 {
   text-decoration: none;
 }
 
+/* container "projets" */
 #projects {
   text-align: center;
   color: floralwhite;
@@ -265,6 +268,7 @@ h1 {
 }
 
 #git-projects {
+  font-family: sans-serif;
   position: absolute;
   font-size: 2rem;
   /* left right pour centrer par rapport à la fenêtre */
@@ -280,7 +284,7 @@ h1 {
   width: 800px;
   height: 400px;
   border: 4px solid #63a0d9;
-  box-shadow: 0 0 14px #63a0d9;
+  box-shadow: 0 0 20px #5e975e;
   position: relative;
   margin: 0 auto;
   margin-top: -60%;
@@ -305,6 +309,7 @@ h1 {
   left: 10%;
   margin-top: 30%;
   opacity: 0.6;
+  color: #63a0d9;
 }
 
 .fa-circle-arrow-right {
@@ -312,6 +317,15 @@ h1 {
   right: 10%;
   margin-top: 30%;
   opacity: 0.6;
+  color: #63a0d9;
+}
+
+.fa-circle-arrow-left:hover {
+  color: #5e975e;
+}
+
+.fa-circle-arrow-right:hover {
+  color: #5e975e;
 }
 
 .fa-caret-left,
@@ -321,6 +335,16 @@ h1 {
 .fa-left-long,
 .fa-right-long {
   display: none;
+  color: #63a0d9;
+}
+
+.fa-caret-left:hover,
+.fa-caret-right:hover,
+.fa-arrow-left:hover,
+.fa-arrow-right:hover,
+.fa-left-long:hover,
+.fa-right-long:hover {
+  color: #5e975e;
 }
 
 /* voir sa création dans le fichier js */
@@ -333,7 +357,23 @@ h1 {
   background-size: cover;
 }
 
+.descrphoto {
+  font-family: sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  font-size: 35px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+/* container "contact" */
 #contact {
+  position: relative;
+  background-color: white;
+}
+
+/* C'est le h2 */
+#title-contact {
   position: relative;
   text-align: center;
   color: floralwhite;
@@ -345,19 +385,15 @@ h1 {
   background-color: #5e975e;
 }
 
-#container-contact {
-  position: relative;
-  background-color: white;
-}
-
 .details {
   display: flex;
   justify-content: space-between;
   margin: 30px;
+  font-family: sans-serif;
 }
 
 /* numero de tel et mail */
-#container-contact a {
+#contact a {
   font-size: 50px;
   color: #63a0d9;
   text-decoration: none;
@@ -415,6 +451,7 @@ h1 {
 }
 
 /* footer */
+
 #end {
   background-color: black;
   text-align: center;
@@ -441,13 +478,13 @@ h1 {
 
 #backToTop {
   position: fixed;
-  bottom: 10px; /* Distance du bas de la page */
-  right: 3px; /* Distance du bord droit */
+  bottom: 40px; /* Distance du bas de la page */
+  right: 0px; /* fixage au bord droit */
   color: #63a0d9; /* Couleur de l'icône */
-  padding: 10px 15px; /* Espacement interne */
+  padding: 10px 10px; /* Espacement interne */
   text-align: center;
   text-decoration: none;
-  font-size: 50px; /* Taille de l'icône */
+  font-size: 45px; /* Taille de l'icône */
   display: none; /* Masqué par défaut */
   z-index: 100; /* Pour s'assurer qu'il est au-dessus des autres éléments */
   opacity: 0.9;
@@ -458,14 +495,21 @@ h1 {
 }
 
 .terms {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
   padding: 3rem;
   font-size: 23px;
 }
 
+/* Concerne le texte "Télécharger le CV (format PDF)" */
 #cv {
-  padding: 50px;
+  padding: 5% 10% 5% 10%;
   text-align: center;
+}
+
+#pdf_cv {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 #cv img {
@@ -537,12 +581,13 @@ h1 {
   }
 
   #cadre-photo {
-    margin: 100px 5% 330px 5%;
-    width: 280px;
+    margin: 100px 2% 380px 5%;
+    width: 330px;
   }
 
   #bio {
-    font-size: 16px;
+    font-size: 1rem;
+    height: 730px;
   }
 
   #git-projects {
@@ -565,6 +610,10 @@ h1 {
   .photo {
     width: 500px;
     height: 250px;
+  }
+
+  .descrphoto {
+    font-size: 21px;
   }
 
   .fa-circle-arrow-left,
@@ -599,12 +648,7 @@ h1 {
     display: block;
   }
 
-  .details {
-    display: wrap;
-    flex-wrap: wrap;
-  }
-
-  #container-contact a {
+  #contact a {
     font-size: 35px;
   }
 }
@@ -639,7 +683,7 @@ h1 {
     margin-top: 95px;
   }
 
-  h1 {
+  #davidngo {
     position: absolute;
     margin-left: 130px;
     font-size: 60px;
@@ -713,7 +757,7 @@ h1 {
     margin-top: 55px;
   }
 
-  #container-aboutme {
+  #aboutme {
     height: 1200px;
   }
 
@@ -761,6 +805,10 @@ h1 {
     height: 150px;
   }
 
+  .descrphoto {
+    font-size: 16px;
+  }
+
   .fa-arrow-left,
   .fa-arrow-right,
   .fa-circle-arrow-left,
@@ -800,7 +848,7 @@ h1 {
     flex-wrap: wrap;
   }
 
-  #container-contact a {
+  #contact a {
     font-size: 35px;
   }
 }
@@ -855,7 +903,7 @@ h1 {
     margin-top: 125px;
   }
 
-  h1 {
+  #davidngo {
     position: absolute;
     margin-left: 80px;
     font-size: 50px;
@@ -924,7 +972,7 @@ h1 {
     margin-top: 55px;
   }
 
-  #container-aboutme {
+  #aboutme {
     height: 1200px;
   }
 
@@ -973,6 +1021,10 @@ h1 {
     height: 125px;
   }
 
+  .descrphoto {
+    font-size: 13px;
+  }
+
   .fa-arrow-left,
   .fa-arrow-right,
   .fa-circle-arrow-left,
@@ -1007,12 +1059,12 @@ h1 {
     margin-top: 60%;
   }
 
+  #contact a {
+    font-size: 25px;
+  }
+
   .details {
     display: wrap;
     flex-wrap: wrap;
-  }
-
-  #container-contact a {
-    font-size: 25px;
   }
 }
